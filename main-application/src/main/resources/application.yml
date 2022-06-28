@@ -1,0 +1,16 @@
+server:
+  port: ${SERVER_PORT:8088}
+
+spring:
+  profiles:
+    active: production
+  security:
+    user:
+      name: ${USER_NAME:root}
+      password: ${USER_PASSWORD:!Q12w3e4r5t}
+
+application:
+  locale:
+    tag: ${LOCALE_TAG:ru}
+
+---

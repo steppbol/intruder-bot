@@ -1,0 +1,9 @@
+---
+
+bot:
+  username: ${BOT_USERNAME:}
+  token: ${BOT_TOKEN:1164408920:}
+  channel-id: ${CHANNEL_ID:}
+  webhook:
+    path: ${WEBHOOK_PATH:}
+  administrators:

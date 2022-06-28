@@ -1,0 +1,31 @@
+---
+
+spring:
+  datasource:
+    username: ${DATABASE_USERNAME:}
+    password: ${DATABASE_PASSWORD:}
+    url: jdbc:postgresql://${DATABASE_HOST:}:${DATABASE_PORT:}/${DATABASE_NAME:}
+  jpa:
+    open-in-view: false
+    show-sql: ${SHOW_SQL:false}
+  flyway:
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    locations: classpath:db/migration
+
+youtube:
+  application-name: ${APPLICATION_NAME:}
+  api-key: ${YOUTUBE_API_KEY:}
+
+media:
+  album-cover-path: ${MEDIA_ALBUM_COVER_PATH:./service-provider/src/main/resources/images/cover.jpg}
+  filename: ${MEDIA_FILENAME:ffanaticism}
+  max-duration: ${MEDIA_MAX_DURATION:1200}
+  directory-path: ${MEDIA_DIRECTORY_PATH:./media/}
+  directory-size: ${MEDIA_DIRECTORY_SIZE:128}
+
+download-pool:
+  core-size: ${DOWNLOAD_POOL_CORE_SIZE:10}
+  max-size: ${DOWNLOAD_POOL_MAX_SIZE:50}
+  queue-capacity: ${DOWNLOAD_POOL_QUEUE_CAPACITY:50}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>intruder</artifactId>
+        <groupId>com.ffanaticism</groupId>
+        <version>0.1.0</version>
+    </parent>
+
+    <artifactId>telegram-handler</artifactId>
+
+    <properties>
+        <telegrambots.version>5.4.0.1</telegrambots.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.telegram</groupId>
+            <artifactId>telegrambots-spring-boot-starter</artifactId>
+            <version>${telegrambots.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ffanaticism</groupId>
+            <artifactId>service-provider</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+</project>

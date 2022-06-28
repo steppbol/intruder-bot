@@ -1,0 +1,4 @@
+---
+
+springdoc:
+  packagesToScan: com.ffanaticism.intruder.webhandler.controller
